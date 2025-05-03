@@ -23,19 +23,13 @@ html {
 
 body{
     width: 320px;
-    height: 1024px;
+    height: auto;
     position: absolute;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 16px 0px 52px 0 rgba(14, 24, 80, 0.2);
 }
 
-.highlight {
-    display: none;
-    width: 4px;
-    height: 24px;
-    background-image: url(icons2/highlight\ \(1\).svg);
-    margin-left: auto;
-}
+
 
 /* Верхние кнопки */
 .top-container{
@@ -89,7 +83,17 @@ body{
 .main-menu {
     margin-left: -20px;
     margin-top: 40px;
+    padding-left: 0;    
     list-style: none;
+}
+
+.highlight {
+    display: none;
+    width: 4px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+    background-image: url(icons2/highlight\ \(1\).svg);
 }
 
 .main-menu a {
@@ -98,24 +102,25 @@ body{
 }
 
 .main-menu li {
-    margin: 0;
-    padding: 0;
+    margin-left: 50px;
     display: block;
     padding: 17px 5px; 
     font-family: 'TT Lakes', sans-serif;
 }
 
-.main-menu li:hover {
+.main-menu li:hover *:not(.highlight) {
     opacity: 0.5;
     transition-property: opacity;
     transition-duration: 300ms;
-    .highlight {
-        display: inline-block;
-    }
+} 
+
+.main-menu li:hover .highlight {
+    opacity: 1;
+    display: inline-flex;
 }
 
 /* Общий футтер */
-.footer{
+.footer {
     width: 196px;
     height: 124px;
     margin-left: 30px;
