@@ -30,6 +30,48 @@ body{
 }
 
 
+/* Кнопки и стили */
+
+.round-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.round-button:hover {
+    opacity: 0.8;
+    transition-property: opacity;
+    transition-duration: 300ms;
+}
+
+.round-button--burger {
+    background-image: url(icons2/burger.svg);
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.round-button--search {
+    background-image: url(icons2/search.svg);
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+
+.round-button--chat-copy {
+    background-image: url(icons2/chat\ copy.svg);
+}
+
+.round-button--chat {
+    background-image: url(icons2/chat.svg);
+    margin-left: 10px;
+}
+
+.round-button--profile {
+    background-image: url(icons2/profile.svg);
+    margin-left: 10px;
+}
 
 /* Верхние кнопки */
 .top-container{
@@ -37,15 +79,6 @@ body{
     justify-content: space-between;
 }
 
-.top-container__burger {
-    background: url(icons2/burger.svg) no-repeat;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    margin-left: 10px;
-    margin-top: 10px;
-}
 
 .logo {
     transform: translateX(-50px);
@@ -53,30 +86,6 @@ body{
     margin-top: 10px;
 }
 
-.top-container__search {
-    background: url(icons2/search.svg) no-repeat;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    margin-right: 20px;
-    margin-top: 10px;
-    
-}
-
-.top-container__burger:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    transition-property: opacity;
-    transition-duration: 300ms;
-}
-
-.top-container__search:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    transition-property: opacity;
-    transition-duration: 300ms;
-}
 
 /* Список меню */
 
@@ -138,53 +147,6 @@ body{
     flex-direction: column;
 }
 
-/* Нижние кнопки */
-.down-container__chat-copy { 
-    background: url(icons2/chat\ copy.svg) no-repeat;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    margin-right: 10px;
-}
-
-.down-container__chat { 
-    background: url(icons2/chat.svg) no-repeat;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    margin-right: 10px;
-}
-
-.down-container__profile { 
-    background: url(icons2/profile.svg) no-repeat;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-}
-
-.down-container__chat-copy:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    transition-property: opacity;
-    transition-duration: 300ms;
-}
-
-.down-container__chat:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    transition-property: opacity;
-    transition-duration: 300ms;
-}
-
-.down-container__profile:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    transition-property: opacity;
-    transition-duration: 300ms;
-}
 
 /* Ссылки */
 .links a {
@@ -227,13 +189,16 @@ body{
 
 /* Языки страницы */
 .lang {
-    display: block;
-    margin-left: 30px;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10px;
     margin-top: 40px; 
+    padding: 0;
 }
 
 .lang li {
     list-style: none;
+    margin-left: 30px;
 }
 
 .lang a {
@@ -244,7 +209,9 @@ body{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
+    
 }
+
 
 .lang a:hover {
     opacity: 0.5;
